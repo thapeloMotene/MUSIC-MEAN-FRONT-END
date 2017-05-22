@@ -1,0 +1,18 @@
+
+.btn ,.badge{
+   padding: 6px;
+   padding-bottom: 2px;
+   margin-right: 10px !important;
+   margin-bottom: 6px !important;
+   border-radius: 0px;
+}
+.badge{
+    padding-bottom: 11px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 6px;
+}
+
+.p{
+    padding-bottom: 15px;
+}

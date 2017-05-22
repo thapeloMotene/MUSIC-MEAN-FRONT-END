@@ -1,0 +1,36 @@
+<!-- login modal -->
+<form  (submit)="login()" >
+<div class="" id="loginModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header ">
+        <h4 class="modal-title">LOGIN</h4>
+      </div>
+     <div class="alert alert-danger" *ngIf="isError">
+				<button type="button" class="close" (click)=removeAlert() aria-label="Close">
+					<span aria-hidden>x</span>
+				</button>
+				{{message}}
+			</div>
+      <div class="modal-body">
+       
+         <div class="form-group">
+            <label for="logininputEmail" class="control-label">Email Address:</label>
+            <div class="">
+            <input type="email" class="form-control" id="logininputEmail" placeholder="Email" [(ngModel)]="loginEmail" name="loginEmail">
+        </div>
+
+          <div class="form-group">
+              <label for="loginInputPassword" class="control-label">Password:</label>
+              <input type="password" class="form-control" id="loginInputPassword" placeholder="Password" [(ngModel)]="loginPassword" name="loginPassword">
+       </div>
+    </div>
+      </div>
+      <div class="modal-footer">
+        <button type="reset" class="btn btn-default">RESET</button>
+        <button type="submit" class="btn btn-primary">LOGIN</button>
+      </div>
+    </div>
+  </div>
+</div>
+</form>

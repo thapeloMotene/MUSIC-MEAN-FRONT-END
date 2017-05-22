@@ -1,0 +1,42 @@
+
+<form  (submit)='register()'>
+ 
+<div class="" id="signupModal" #regForm >
+ 
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+       
+        <h4 class="modal-title">SIGN UP</h4>
+      </div>
+      	<div class="alert alert-danger" *ngIf="isError">
+				<button type="button" class="close" (click)=removeAlert() aria-label="Close">
+					<span aria-hidden>x</span>
+				</button>
+				{{message}}
+			</div>
+      <div class="modal-body">
+         <div class="form-group">
+            <label for="name" class="control-label">Username:</label>
+            <input type="text" class="form-control" id="inputName" placeholder="Enter Your Username"  name="name" [(ngModel)]="signUpName" required>
+        </div>
+         <div class="form-group">
+            <label for="inputEmail" class="control-label">Email Address:</label>
+            <input type="email" class="form-control" id="inputEmail" placeholder="Email"  name="email" [(ngModel)]="signUpEmail"  required>
+        </div>
+
+          <div class="form-group">
+              <label for="inputPassword" class="control-label">Password:</label>
+              <input type="password" class="form-control" id="inputPassword" placeholder="Password" [(ngModel)]="signUpPassword"  name="password" required>
+        </div>
+    </div>
+     
+      <div class="modal-footer">
+        <button type="reset" class="btn btn-default">RESET</button>
+        <button type="submit" class="btn btn-primary ">REGISTER</button>
+         </div>
+      </div>
+    </div>
+  </div>
+
+</form>

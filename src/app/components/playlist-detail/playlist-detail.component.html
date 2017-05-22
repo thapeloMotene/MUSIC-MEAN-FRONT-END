@@ -1,0 +1,29 @@
+<div id="album" *ngIf="playlist">
+  <div class="panel panel-primary">
+  <div class="panel-heading">
+ <header class="album-header">
+  <div class="row">
+    <div class="container">
+    <h4> {{ playlist.name.toUpperCase()}}</h4>
+    </div>
+    <div class="col-md-8">
+      <h2 class="panel-title"> {{playlist.description}}</h2>
+    </div>
+  </div>
+ </header>
+  </div>
+ <div class="panel-body">
+ <div class="album-tracks">
+   <p>Tracks:</p>
+   <div *ngFor="let track of playlist.tracks" >
+     <div class="well">
+       <a (click)="removeTrack(track)" class="btn btn-danger pull-right"> <span class="glyphicon glyphicon-trash"> </span></a>
+       <h5> {{track.name}}</h5>
+       <p> Artist: {{track.artist}} </p>
+      <a href="{{track.track_url}}" target="_blank"> Play Track</a> 
+     </div>
+   </div>
+ </div>
+</div>
+</div>
+</div>
